@@ -58,7 +58,7 @@ class InteractiveRecord
       p = property
       v = value
     end
-    
+
     sql = "SELECT * FROM #{self.table_name} WHERE #{p} = #{v}"
 
     DB[:conn].execute(sql)
