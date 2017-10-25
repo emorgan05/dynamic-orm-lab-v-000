@@ -58,6 +58,7 @@ class InteractiveRecord
     property = hash.keys
     property_name = property[0].to_s
     value = hash[property_name.to_sym]
+    
     sql = "SELECT * FROM #{self.table_name} WHERE #{property_name} = '#{value}'"
 
     DB[:conn].execute(sql)
